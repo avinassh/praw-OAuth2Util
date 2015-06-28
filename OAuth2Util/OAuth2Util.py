@@ -82,6 +82,10 @@ class OAuth2Util:
 
     def _set_access_credentials(self):
         try:
+            with open(self.OAUTHTOKEN_CONFIGFILE, "r") as f:
+                lines = [x.strip() for x in f.readlines()]
+            self.token = lines[0]
+            self.refresh_token = lines[1]
             self.r.set_access_credentials(self.scopes, self.token,
                                           self.refresh_token)
         except praw.errors.OAuthInvalidToken:
