@@ -88,7 +88,7 @@ class OAuth2Util:
             self.refresh_token = lines[1]
             self.r.set_access_credentials(self.scopes, self.token,
                                           self.refresh_token)
-        except praw.errors.OAuthInvalidToken:
+        except (praw.errors.OAuthInvalidToken, FileNotFoundError):
             if self._print:
                 print("Request new Token")
             self._get_new_access_information()
