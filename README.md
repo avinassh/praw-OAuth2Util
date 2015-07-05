@@ -1,4 +1,1 @@
-# OAuth2Util
-OAuth2 Utility for PRAW by [/u/SmBe19](http://www.reddit.com/u/SmBe19)
-
-See [OAuth2Util/README.md](OAuth2Util/README.md) for more information
+I am no longer maintaining this fork. Use [PRAWOAuth2](https://github.com/avinassh/prawoauth2) instead.
